@@ -1,0 +1,92 @@
+@font-face {
+  font-family: WorkSansSemibold;
+  src: url(../Fonts/Works_Sans/WorkSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: WorkSansRegular;
+  src: url(../Fonts/Works_Sans/WorkSans-Regular.ttf);
+}
+@font-face {
+  font-family: WorkSansItalic;
+  src: url(../Fonts/Works_Sans/WorkSans-Italic.ttf);
+}
+@font-face {
+  font-family: WorkSansBold;
+  src: url(../Fonts/Works_Sans/WorkSans-Bold.ttf);
+}
+@font-face {
+  font-family: GaramondMediumItalic;
+  src: url(../Fonts/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf);
+}
+#Happy_Navbar {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  padding-top: 55px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 0px;
+}
+
+#Happy_Logo {
+  height: 60px;
+  width: 350px;
+}
+
+#Happy_Navbar #navbarNav {
+  justify-content: flex-end;
+  font-family: WorkSansSemibold;
+  font-size: 22px;
+  color: white;
+}
+
+#Happy_Navbar #navbarNav a {
+  height: 40px;
+  color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 2px 0px;
+}
+
+#Happy_Navbar #navbarNav .nav-item :hover {
+  border-bottom: 1px solid white;
+  width: min-content;
+}
+
+#Happy_Banner {
+  flex-direction: column;
+  padding: 0;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+#Happy_Banner_Text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  text-align: center;
+}
+
+#Happy_Banner_Text h1 {
+  font-family: GaramondMediumItalic;
+  font-size: 40px;
+  color: #101820;
+  margin: 0;
+}
+
+#Happy_Banner_Text p {
+  font-family: WorkSansRegular;
+  font-size: 22px;
+  color: #666666;
+  margin: 0;
+}
+
+#Happy_Banner_Text hr {
+  height: 2.5px;
+  width: 45px;
+  opacity: 100%;
+  background-color: #3AAA81;
+}
+
+/*# sourceMappingURL=main.css.map */
