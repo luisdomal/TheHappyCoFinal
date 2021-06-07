@@ -26,21 +26,23 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 0px;
+  transition: 1000ms ease;
 }
-
-#Happy_Logo {
+#Happy_Navbar #Happy_Logo {
   height: 60px;
   width: 350px;
 }
-
 #Happy_Navbar #navbarNav {
   justify-content: flex-end;
   font-family: WorkSansSemibold;
   font-size: 22px;
   color: white;
 }
-
-#Happy_Navbar #navbarNav a {
+#Happy_Navbar #navbarNav .nav-item :hover {
+  border-bottom: 1px solid white;
+  width: min-content;
+}
+#Happy_Navbar a {
   height: 40px;
   color: white;
   margin-left: 30px;
@@ -48,9 +50,13 @@
   padding: 2px 0px;
 }
 
-#Happy_Navbar #navbarNav .nav-item :hover {
-  border-bottom: 1px solid white;
-  width: min-content;
+#Happy_Navbar.scroll {
+  background-color: #101820;
+  position: fixed;
+  width: 100%;
+  padding-top: 0px;
+  transition: 1000ms ease;
+  border-bottom: solid white;
 }
 
 #Happy_Banner {
@@ -59,30 +65,26 @@
   width: auto;
   margin-bottom: 50px;
 }
-
-#Happy_Banner_Text {
+#Happy_Banner #Happy_Banner_Text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 55%;
   text-align: center;
 }
-
-#Happy_Banner_Text h1 {
+#Happy_Banner #Happy_Banner_Text h1 {
   font-family: GaramondMediumItalic;
   font-size: 40px;
   color: #101820;
   margin: 0;
 }
-
-#Happy_Banner_Text p {
+#Happy_Banner #Happy_Banner_Text p {
   font-family: WorkSansRegular;
   font-size: 22px;
   color: #666666;
   margin: 0;
 }
-
-#Happy_Banner_Text hr {
+#Happy_Banner #Happy_Banner_Text hr {
   height: 2.5px;
   width: 45px;
   opacity: 100%;
