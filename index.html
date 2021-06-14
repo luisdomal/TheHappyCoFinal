@@ -5,33 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheHappyCo</title>
-    
     <link rel="stylesheet" href="./Styles/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
 </head>
 <body id="Happy_Body">
-    <nav id="Happy_Navbar" class="navbar navbar-expand-lg navbar-dark">
-        <div id="Happy_Header" class="container-fluid">
-          <img id="Happy_Logo" src="./Sources/logo_header_blanco.svg" alt="Happy_Logo_White">
-          <button id="Navbartoggler" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav id="Happy_Navbar" class="navbar navbar-expand-lg navbar-dark">
+      <div id="Happy_Header" class="container-fluid">
+        <img id="Happy_Logo" src="./Sources/logo_header_blanco.svg" alt="Happy_Logo_White">
+        <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">NOSTROS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">PRODUCTOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">CONTACTO</a>
-              </li>
-            </ul>
-          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">NOSTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACTO</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </div>
+  </nav>
     <section id="Happy_Header_Banner">
         <div id=Happy_Banner class="container-fluid d-flex">
             <img src="./Sources/banner.png" alt="Happy_Banner_Image" >
@@ -46,9 +45,73 @@
                     suministro totalmente integrada desde la semilla hasta los productos terminados.
                 </p>
             </div>
-
         </div>
     </section>
+    <section id="CBD_Header_Banner">
+      <div id="CBD_Banner"> 
+        <div id="CBD_Banner_Text" class="container-fluid d-flex">
+          <h1>
+            ¿QUÉ ES EL CBD?
+          </h1>
+          <hr>
+          <p>
+            El CBD es un cannabinoide que se encuentra en la planta de Cannabis que aporta algunos de los
+            beneficios de la marihuana pero no tiene sus efectos psicoactivos. Algunos de los beneficios y trastornos 
+            en los que el CBD puede ser de ayuda son los siguientes:
+          </p>
+        </div>
+        <div id="Benefits_2" class="d-flex">
+          <img src="./Sources/marihuana_plant.png">
+        </div>
+        <div id="CBD_Benefits" class="container-fluid d-flex">
+
+          <div id="Benefits_1">
+            <div id="Col_1">
+              <img src="./Sources/Icons_Que es CBD/icn_inflamac.svg">
+              <p>
+                Anti-inflamatorio natural
+              </p>
+            </div>
+            <div id="Col_1">
+              <img src="./Sources/Icons_Que es CBD/icn_ansiedad.svg">
+              <p>
+                Reduce la ansiedad y síntomas de estrés post-traumático
+              </p>
+            </div>
+            <div id="Col_1">
+              <img src="./Sources/Icons_Que es CBD/icn_temblor.svg">
+              <p>
+                Reduce los temblores de Parkinson
+              </p>
+            </div>
+          </div>
+          <div id="Benefits_2_1">
+            <img src="./Sources/marihuana_plant.png">
+          </div>
+          <div id="Benefits_3">
+            <div id="Col_1">
+              <img src="./Sources/Icons_Que es CBD/icn_espasmos.svg">
+              <p>
+                Mejorar los espasmos de la epilepsia
+              </p>
+            </div>
+            <div id="Col_1">
+              <img src="./Sources/Icons_Que es CBD/icn_intestino.svg">
+              <p>
+                Mejora la función intestinal en pacientes con Crohn
+              </p>
+            </div>
+            <div id="Col_1">
+              <img src="./Sources/Icons_Que es CBD/icn_articul.svg">
+              <p>
+                Reduce el dolor articular y progresión de la artritis
+              </p>
+            </div>
+          </div>
+      </div>       
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
