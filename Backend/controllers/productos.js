@@ -1,13 +1,11 @@
 // controllers/productos.js
 const mongoose = require('mongoose')
-const Producto = mongoose.model('Mascota')
+const Producto = mongoose.model('Producto')
 
 function crearProducto(req, res, next) {
   var producto = new Producto(req.body)
-  mascota.anunciante = req.usuario.id
-  mascota.estado = 'disponible'
-  mascota.save().then(mascota => {
-    res.status(201).send(mascota)
+    producto.save().then(producto => {
+    res.status(201).send(producto)
   }).catch(next)
 }
 
