@@ -1,0 +1,60 @@
+// controllers/productos.js
+const mongoose = require('mongoose')
+const Producto = mongoose.model('Mascota')
+
+function crearProducto(req, res, next) {
+  var producto = new Producto(req.body)
+  mascota.anunciante = req.usuario.id
+  mascota.estado = 'disponible'
+  mascota.save().then(mascota => {
+    res.status(201).send(mascota)
+  }).catch(next)
+}
+
+function obtenerProductos(req, res, next) {
+  if(req.params.id){
+    Producto.findById(req.params.id)
+			.populate('producto', 'categoria foto descripcion precio').then(productos => {
+	      res.send(productos)
+	    }).catch(next)
+  } else {
+    Producto.find().then(productos=>{
+      res.send(productos)
+    }).catch(next)
+  }
+}
+
+function modificarProducto(req, res, next) {
+  console.log(req.producto)
+  Producto.findById(req.producto.id).then(product => {
+    if (!product) { return res.sendStatus(401); }
+    let nuevaInfo = req.body
+    if (typeof nuevaInfo.producto !== 'undefined')
+    product.producto = nuevaInfo.producto
+    if (typeof nuevaInfo.categoria !== 'undefined')
+    product.categoria = nuevaInfo.categoria
+    if (typeof nuevaInfo.foto !== 'undefined')
+    product.foto = nuevaInfo.foto
+    if (typeof nuevaInfo.descripcion !== 'undefined')
+    product.descripcion = nuevaInfo.descripcion
+    if (typeof nuevaInfo.password !== 'undefined')
+    product.save().then(updatedProduct => {                                   //Guardando usuario modificado en MongoDB.
+      res.status(201).json(updatedProduct.publicData())
+    }).catch(next)
+  }).catch(next)
+}
+
+function eliminarProducto(req, res) {
+  // únicamente borra a su propio producto obteniendo el id del token
+  Producto.findOneAndDelete({ _id: req.producto.id }).then(r => {         //Buscando y eliminando producto en MongoDB.
+    res.status(200).send(`Producto ${req.params.id} eliminado: ${r}`);
+  })
+
+}
+
+module.exports = {
+  crearProducto,
+  obtenerProductos,
+  modificarProducto,
+  eliminarProducto
+}

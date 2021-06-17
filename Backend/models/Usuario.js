@@ -1,23 +1,3 @@
-// Usuario.js
-/** Clase que representa a un usuario de la plataforma*/
-/*class Usuario {
-    constructor(id, username, nombre, apellido, email, password, ubicacion, telefono, bio, fotos, tipo) {
-      this.id = id;
-      this.username = username;
-      this.nombre = nombre;
-      this.apellido = apellido;
-      this.email = email;
-      this.password = password;
-      this.ubicacion = ubicacion;
-      this.telefono = telefono;
-      this.bio = bio;
-      this.fotos = fotos;
-      this.tipo = tipo; // tipo normal o anunciante
-    }
-  }
-  
-  module.exports = Usuario;*/
-
    // Usuario.js
    const mongoose = require('mongoose');                         //Importando mongoose.
    const uniqueValidator = require("mongoose-unique-validator"); //Importando módulo mongoose-unique-validator, pendiente de instalar.
@@ -44,11 +24,9 @@
       match: [/\S+@\S+\.\S+/, "es inválido"],
       index: true,
     },
-    ubicacion: String,
+    direccion: String,
     telefono: String,
-    bio: String,
     foto: String,
-    tipo: { type: String, enum: ["normal", "anunciante"] },
     hash: String, //este campo se utilizará para la sesión
     salt: String, //este campo se utilizará para la sesión
   },
@@ -108,11 +86,9 @@ UsuarioSchema.methods.publicData = function(){
     email: this.email,
     nombre: this.nombre,
     apellido: this.apellido,
-    bio: this.bio,
-    foto: this.foto,
-    tipo: this.tipo,  
-    ubicacion: this.ubicacion,
+    direccion: this.direccion,
     telefono: this.telefono,
+    foto: this.foto,  
     createdAt: this.createdAt,
     updatedAt: this.updatedAt
   };
