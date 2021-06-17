@@ -46,8 +46,7 @@ const errorhandler = require('errorhandler')
     
 require("./models/Usuario");
 require('./config/passport');
-require('./models/Mascota');
-require('./models/Solicitud');
+require('./models/Producto');
 
 
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
