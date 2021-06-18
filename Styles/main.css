@@ -23,6 +23,7 @@
 }
 
 #Happy_Navbar {
+  z-index: 1000;
   background-color: transparent;
   position: fixed;
   width: 100%;
@@ -245,10 +246,46 @@
   justify-content: center;
   width: 100%;
 }
-#Container_Products #Products_List img {
+#Container_Products #Products_List #container {
+  position: relative;
+}
+#Container_Products #Products_List #container img {
   margin: 10px;
   max-height: 325px;
   max-width: 360px;
+}
+#Container_Products #Products_List #container #middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#Container_Products #Products_List #container #middle h1 {
+  font-family: WorkSansBold;
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+#Container_Products #Products_List #container #middle button {
+  background-color: #3AAA81;
+  height: 50px;
+  width: 100%;
+  color: white;
+  font-family: WorkSansRegular;
+  font-size: 22px;
+  border: none;
+  text-transform: uppercase;
+}
+#Container_Products #Products_List #container:hover img {
+  filter: brightness(0.3);
+}
+#Container_Products #Products_List #container:hover #middle {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
@@ -371,6 +408,24 @@
   #Container_Products #Products_List img {
     max-height: 125px;
     max-width: 160px;
+  }
+  #Container_Products #Products_List #container img {
+    max-height: 125px;
+    max-width: 160px;
+  }
+  #Container_Products #Products_List #container #middle h1 {
+    font-size: 10px;
+    padding-bottom: 0;
+  }
+  #Container_Products #Products_List #container #middle button {
+    height: 20px;
+    font-size: 10px;
+  }
+  #Container_Products #Products_List #container:hover img {
+    filter: brightness(0.3);
+  }
+  #Container_Products #Products_List #container:hover #middle {
+    opacity: 1;
   }
 }
 
