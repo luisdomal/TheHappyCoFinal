@@ -237,7 +237,11 @@
   font-size: 22px;
   cursor: pointer;
 }
-#Container_Products #Products_Filter ul li:hover {
+#Container_Products #Products_Filter ul #btn:hover {
+  background-color: #3AAA81;
+  color: white;
+}
+#Container_Products #Products_Filter ul #btn.active {
   background-color: #3AAA81;
   color: white;
 }
@@ -245,6 +249,12 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+}
+#Container_Products #Products_List .FilterDiv {
+  display: none;
+}
+#Container_Products #Products_List .show {
+  display: block;
 }
 #Container_Products #Products_List #container {
   position: relative;
@@ -263,6 +273,7 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  width: 80%;
 }
 #Container_Products #Products_List #container #middle h1 {
   font-family: WorkSansBold;
@@ -274,7 +285,7 @@
 #Container_Products #Products_List #container #middle button {
   background-color: #3AAA81;
   height: 50px;
-  width: 100%;
+  width: 50%;
   color: white;
   font-family: WorkSansRegular;
   font-size: 22px;
