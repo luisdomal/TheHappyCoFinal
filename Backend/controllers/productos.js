@@ -23,8 +23,8 @@ function obtenerProductos(req, res, next) {
 }
 
 function modificarProducto(req, res, next) {
-  console.log(req.producto)
-  Producto.findById(req.producto.id).then(product => {
+  console.log(req.product)
+  Producto.findById(req.params.id).then(product => {
     if (!product) { return res.sendStatus(401); }
     let nuevaInfo = req.body
     if (typeof nuevaInfo.producto !== 'undefined')
@@ -35,7 +35,6 @@ function modificarProducto(req, res, next) {
     product.foto = nuevaInfo.foto
     if (typeof nuevaInfo.descripcion !== 'undefined')
     product.descripcion = nuevaInfo.descripcion
-    if (typeof nuevaInfo.password !== 'undefined')
     product.save().then(updatedProduct => {                                   //Guardando usuario modificado en MongoDB.
       res.status(201).json(updatedProduct.publicData())
     }).catch(next)
@@ -44,7 +43,7 @@ function modificarProducto(req, res, next) {
 
 function eliminarProducto(req, res) {
   // únicamente borra a su propio producto obteniendo el id del token
-  Producto.findOneAndDelete({ _id: req.producto.id }).then(r => {         //Buscando y eliminando producto en MongoDB.
+  Producto.findOneAndDelete({ _id: req.params.id }).then(r => {         //Buscando y eliminando producto en MongoDB.
     res.status(200).send(`Producto ${req.params.id} eliminado: ${r}`);
   })
 

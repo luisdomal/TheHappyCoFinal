@@ -1,5 +1,5 @@
 /*********************** COMENTAR EN PRODUCTIVO *******************************/
- require('dotenv').config(); // Configuring dotenv -> Para instalar -> npm i -D dotenv 
+//  require('dotenv').config(); // Configuring dotenv -> Para instalar -> npm i -D dotenv 
 /*********************** COMENTAR EN PRODUCTIVO *******************************/
 
 var express = require('express'),

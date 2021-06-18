@@ -6,7 +6,7 @@ const ProductoSchema = new mongoose.Schema({
     categoria: { type: String, enum: ['tincturas', 'body lotion', 'gomitas', 'cremas', 'vapes'] }, // tincturas|body lotion|gomitas|cremas|vapes
     foto: [String], // Links a la fotografía
     descripcion: {type:String, required: true}, // Descripción del producto
-    precio: {type:String, required: true}, // Precio del producto
+    precio: {type:Number, required: true}, // Precio del producto
   }, 
   { timestamps: true }
 );
