@@ -557,9 +557,11 @@ html {
   }
 
   #Happy_Navbar {
-    padding: 0px;
     background-color: #101820;
-    position: fixed;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: 0.5s ease;
+    border-bottom: solid white 0.5px;
   }
   #Happy_Navbar #Happy_Logo {
     height: 50px;

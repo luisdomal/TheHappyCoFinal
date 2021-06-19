@@ -275,12 +275,15 @@ html {
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
+
         .FilterDiv {
             display: none;
         }
+
         .show {
             display: block;
         }
+
         #container {
             position: relative;
 
@@ -368,11 +371,13 @@ html {
             @include AquaLine
         }
     }
+
     #Form_Contact {
         width: 90%;
         padding: 0;
         padding-top: 0px;
         justify-content: center;
+
         #Form1 {
             margin-left: 20px;
             margin-right: 20px;
@@ -447,6 +452,7 @@ html {
         padding: 0;
         justify-content: flex-end;
         padding-right: 100px;
+
         button {
             background-color: sources.$AquaColor;
             flex-basis: 8%;
@@ -469,33 +475,38 @@ html {
 
 // Footer
 
-#Happy_Footer{
+#Happy_Footer {
     max-height: 250px;
     width: 100%;
-    #Grey_Footer{
+
+    #Grey_Footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: sources.$BoxBackgroundColor;
         padding-bottom: 15px;
-        img{
+
+        img {
             height: 70px;
             width: 70px;
             margin-top: 30px;
             margin-bottom: 30px;
         }
-        p{
+
+        p {
             text-align: center;
             font-family: sources.$WorkSansRegular;
             color: sources.$GreyColor;
             font-size: sources.$Size_14pt;
         }
     }
-    #Black_Footer{
+
+    #Black_Footer {
         background-color: sources.$BlackColor;
         align-items: center;
         justify-content: center;
-        h2{
+
+        h2 {
             padding-top: 10px;
             padding-bottom: 10px;
             color: white;
@@ -534,13 +545,16 @@ html {
 
     #Container_Contact {
         padding: 0;
+
         #Form_Contact {
             flex-direction: column;
             padding: 0;
+
             #Form1 {
                 margin-left: 0;
                 margin-right: 0;
                 width: 100%;
+
                 .form-field {
                     ::placeholder {
                         font-size: sources.$Size_10pt;
@@ -586,23 +600,28 @@ html {
         }
 
     }
-    #Happy_Footer{
+
+    #Happy_Footer {
         max-height: 200px;
-        #Grey_Footer{
+
+        #Grey_Footer {
             padding-left: 25px;
             padding-right: 25px;
             padding-bottom: 0px;
-            img{
+
+            img {
                 height: 70px;
                 width: 70px;
                 margin-top: 30px;
                 margin-bottom: 30px;
             }
         }
-        #Black_Footer{
+
+        #Black_Footer {
             padding-left: 25px;
             padding-right: 25px;
-            h2{
+
+            h2 {
                 padding-top: 10px;
                 padding-bottom: 10px;
             }
@@ -624,9 +643,11 @@ html {
     }
 
     #Happy_Navbar {
-        padding: 0px;
         background-color: sources.$BlackColor;
-        position: fixed;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        transition: .5s ease;
+        border-bottom: solid white .5px;
 
         #Happy_Logo {
             height: 50px;
@@ -780,22 +801,27 @@ html {
     #Container_Contact {
         padding-top: 50px;
         padding-bottom: 20px;
+
         #Contact_Title {
             width: 90%;
+
             h1 {
                 font-size: sources.$Size_16pt;
 
             }
         }
-        #Form_Contact{
+
+        #Form_Contact {
             padding: 0;
         }
+
         #Enviar {
             margin-top: 0px;
             margin-bottom: 0px;
             width: 90%;
             padding: 0;
             justify-content: center;
+
             button {
                 flex-basis: 50%;
                 height: 50px;
@@ -804,26 +830,32 @@ html {
         }
 
     }
-    #Happy_Footer{
+
+    #Happy_Footer {
         max-height: 200px;
-        #Grey_Footer{
+
+        #Grey_Footer {
             padding-left: 25px;
             padding-right: 25px;
             padding-bottom: 0px;
-            img{
+
+            img {
                 height: 70px;
                 width: 70px;
                 margin-top: 30px;
                 margin-bottom: 30px;
             }
-            p{
+
+            p {
                 font-size: sources.$Size_10pt;
             }
         }
-        #Black_Footer{
+
+        #Black_Footer {
             padding-left: 25px;
             padding-right: 25px;
-            h2{
+
+            h2 {
                 padding-top: 10px;
                 padding-bottom: 10px;
                 font-size: sources.$Size_10pt;
