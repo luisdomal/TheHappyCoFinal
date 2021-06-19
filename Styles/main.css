@@ -22,8 +22,13 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding: 70px;
+  scroll-behavior: smooth;
+}
+
 #Happy_Navbar {
-  z-index: 1000;
+  top: 0;
   background-color: transparent;
   position: fixed;
   width: 100%;
@@ -238,7 +243,7 @@
   font-size: 22px;
   cursor: pointer;
 }
-#Container_Products #Products_Filter ul #btn:hover {
+#Container_Products #Products_Filter ul li:hover {
   background-color: #3AAA81;
   color: white;
 }
@@ -293,6 +298,11 @@
   border: none;
   text-transform: uppercase;
 }
+#Container_Products #Products_List #container #middle button:hover {
+  border: solid 1px;
+  background-color: #101820;
+  transition: 0.5s ease;
+}
 #Container_Products #Products_List #container:hover img {
   filter: brightness(0.3);
 }
@@ -304,7 +314,7 @@
   padding: 0;
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -331,7 +341,7 @@
 #Container_Contact #Form_Contact {
   width: 90%;
   padding: 0;
-  padding-top: 50px;
+  padding-top: 0px;
   justify-content: center;
 }
 #Container_Contact #Form_Contact #Form1 {
@@ -392,8 +402,8 @@
   border-bottom: solid 0.5px #C2C2C2;
 }
 #Container_Contact #Enviar {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 90%;
   padding: 0;
   justify-content: flex-end;
@@ -409,6 +419,47 @@
   font-size: 22px;
   border: none;
   text-transform: uppercase;
+}
+#Container_Contact #Enviar button:hover {
+  background-color: #101820;
+  transition: 0.5s ease;
+}
+
+#Happy_Footer {
+  max-height: 250px;
+  width: 100%;
+}
+#Happy_Footer #Grey_Footer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEFEF;
+  padding-bottom: 15px;
+}
+#Happy_Footer #Grey_Footer img {
+  height: 70px;
+  width: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#Happy_Footer #Grey_Footer p {
+  text-align: center;
+  font-family: WorkSansRegular;
+  color: #666666;
+  font-size: 18px;
+}
+#Happy_Footer #Black_Footer {
+  background-color: #101820;
+  align-items: center;
+  justify-content: center;
+}
+#Happy_Footer #Black_Footer h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: WorkSansItalic;
+  font-size: 16px;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -426,8 +477,12 @@
     font-size: 13px;
   }
 
+  #Container_Contact {
+    padding: 0;
+  }
   #Container_Contact #Form_Contact {
     flex-direction: column;
+    padding: 0;
   }
   #Container_Contact #Form_Contact #Form1 {
     margin-left: 0;
@@ -462,12 +517,33 @@
     padding-left: 20px;
   }
   #Container_Contact #Enviar {
-    margin-top: 10px;
-    margin-bottom: 10px;
     width: 90%;
     padding: 0;
     justify-content: flex-end;
     padding-right: 50px;
+  }
+
+  #Happy_Footer {
+    max-height: 200px;
+  }
+  #Happy_Footer #Grey_Footer {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 0px;
+  }
+  #Happy_Footer #Grey_Footer img {
+    height: 70px;
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #Happy_Footer #Black_Footer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #Happy_Footer #Black_Footer h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media (min-width: 831px) {
@@ -476,11 +552,14 @@
   }
 }
 @media (max-width: 831px) {
+  html {
+    scroll-padding: 60px;
+  }
+
   #Happy_Navbar {
     padding: 0px;
     background-color: #101820;
     position: fixed;
-    border-bottom: solid white 0.5px;
   }
   #Happy_Navbar #Happy_Logo {
     height: 50px;
@@ -590,6 +669,7 @@
   }
 
   #Container_Contact {
+    padding-top: 50px;
     padding-bottom: 20px;
   }
   #Container_Contact #Contact_Title {
@@ -597,6 +677,9 @@
   }
   #Container_Contact #Contact_Title h1 {
     font-size: 22px;
+  }
+  #Container_Contact #Form_Contact {
+    padding: 0;
   }
   #Container_Contact #Enviar {
     margin-top: 0px;
@@ -609,6 +692,33 @@
     flex-basis: 50%;
     height: 50px;
     font-size: 16px;
+  }
+
+  #Happy_Footer {
+    max-height: 200px;
+  }
+  #Happy_Footer #Grey_Footer {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 0px;
+  }
+  #Happy_Footer #Grey_Footer img {
+    height: 70px;
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #Happy_Footer #Grey_Footer p {
+    font-size: 13px;
+  }
+  #Happy_Footer #Black_Footer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #Happy_Footer #Black_Footer h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
   }
 }
 
