@@ -55,9 +55,10 @@
     background-color: sources.$BlackColor;
     position: fixed;
     width: 100%;
-    padding-top: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     transition: .5s ease;
-    border-bottom: solid white;
+    border-bottom: solid white .5px;
 }
 
 // Header Banner

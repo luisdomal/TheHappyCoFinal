@@ -60,9 +60,10 @@
   background-color: #101820;
   position: fixed;
   width: 100%;
-  padding-top: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   transition: 0.5s ease;
-  border-bottom: solid white;
+  border-bottom: solid white 0.5px;
 }
 
 #Happy_Banner {
