@@ -7,6 +7,13 @@
     background-color: sources.$AquaColor;
 }
 
+@mixin GreyLine {
+    height: 1.5px;
+    width: 85%;
+    opacity: 100%;
+    background-color: sources.$DetailColoLines;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -65,6 +72,7 @@ html {
     transition: .5s ease;
     border-bottom: solid white .5px;
 }
+
 
 // Header Banner
 
@@ -322,13 +330,11 @@ html {
                     border: none;
                     text-transform: uppercase;
                 }
-
                 button:hover {
                     border: solid 1px;
                     background-color: sources.$BlackColor;
                     transition: .5s ease;
                 }
-
             }
         }
 
@@ -514,6 +520,106 @@ html {
             font-size: sources.$Size_12pt;
             text-align: center;
         }
+    }
+}
+
+// Single Product
+
+#SP_Banner{
+    background-color: sources.$BoxBackgroundColor;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    
+    img{
+        max-width: 450px;
+        height: auto;
+    }
+    
+    #SP_Info{
+        max-width: 50%;
+        padding-left: 150px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        h1{
+            padding: 5px;
+            margin: 0;
+        }
+        #SP_Prod{
+            font-family: sources.$GaramondMediumItalic;
+            font-size: sources.$Size_30pt;
+            color: sources.$BlackColor;
+        }
+        #SP_Cost{
+            font-family: sources.$WorkSansBold;
+            font-size: sources.$Size_16pt;
+            color: sources.$BlackColor;
+        }
+        #SP_Detail{
+            
+            font-family: sources.$WorkSansBold;
+            font-size: sources.$Size_14pt;
+            color: sources.$GreyColor;
+        }
+        #SP_Detail_2{
+            
+            font-family: sources.$WorkSansRegular;
+            font-size: sources.$Size_14pt;
+            color: sources.$GreyColor;
+        }
+        button {
+            margin-top: 20px;
+            background-color: sources.$BlackColor;
+            padding: 5px 15px;
+            flex-basis: 8%;
+            height: 50px;
+            width: auto;
+            color: white;
+            font-family: sources.$WorkSansRegular;
+            font-size: sources.$Size_16pt;
+            border-color: sources.$BlackColor;
+            border: .5px solid;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: white;
+            color: sources.$BlackColor;
+            transition: .5s ease;
+            border-color: sources.$BlackColor;
+            border: .5px solid;
+        }
+        hr {
+            @include GreyLine
+        }
+    }
+}
+
+#Ingredientes{
+    flex-direction: column;
+    width: 80%;
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+    text-align: start;
+    font-family: sources.$WorkSansRegular;
+    font-size: sources.$Size_14pt;
+    color: sources.$GreyColor;
+    #Ing_Title{
+        margin: 0;
+        padding-bottom: 15px;
+    }
+    #Ing_Desc{
+        margin: 0;
+    }
+    hr {
+        @include GreyLine
     }
 }
 

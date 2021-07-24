@@ -462,6 +462,104 @@ html {
   text-align: center;
 }
 
+#SP_Banner {
+  background-color: #EEEFEF;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  justify-content: center;
+}
+#SP_Banner img {
+  max-width: 450px;
+  height: auto;
+}
+#SP_Banner #SP_Info {
+  max-width: 50%;
+  padding-left: 150px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+#SP_Banner #SP_Info h1 {
+  padding: 5px;
+  margin: 0;
+}
+#SP_Banner #SP_Info #SP_Prod {
+  font-family: GaramondMediumItalic;
+  font-size: 40px;
+  color: #101820;
+}
+#SP_Banner #SP_Info #SP_Cost {
+  font-family: WorkSansBold;
+  font-size: 22px;
+  color: #101820;
+}
+#SP_Banner #SP_Info #SP_Detail {
+  font-family: WorkSansBold;
+  font-size: 18px;
+  color: #666666;
+}
+#SP_Banner #SP_Info #SP_Detail_2 {
+  font-family: WorkSansRegular;
+  font-size: 18px;
+  color: #666666;
+}
+#SP_Banner #SP_Info button {
+  margin-top: 20px;
+  background-color: #101820;
+  padding: 5px 15px;
+  flex-basis: 8%;
+  height: 50px;
+  width: auto;
+  color: white;
+  font-family: WorkSansRegular;
+  font-size: 22px;
+  border-color: #101820;
+  border: 0.5px solid;
+  text-transform: uppercase;
+}
+#SP_Banner #SP_Info button:hover {
+  background-color: white;
+  color: #101820;
+  transition: 0.5s ease;
+  border-color: #101820;
+  border: 0.5px solid;
+}
+#SP_Banner #SP_Info hr {
+  height: 1.5px;
+  width: 85%;
+  opacity: 100%;
+  background-color: #BDBEBD;
+}
+
+#Ingredientes {
+  flex-direction: column;
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+  text-align: start;
+  font-family: WorkSansRegular;
+  font-size: 18px;
+  color: #666666;
+}
+#Ingredientes #Ing_Title {
+  margin: 0;
+  padding-bottom: 15px;
+}
+#Ingredientes #Ing_Desc {
+  margin: 0;
+}
+#Ingredientes hr {
+  height: 1.5px;
+  width: 85%;
+  opacity: 100%;
+  background-color: #BDBEBD;
+}
+
 @media (max-width: 1200px) {
   #CBD_Banner #CBD_Benefits {
     padding-right: 50px;
