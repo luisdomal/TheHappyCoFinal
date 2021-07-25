@@ -11,10 +11,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-
 <body id="Happy_Body">
   <!-- Navigation Bar -->
-  <nav id="Happy_Navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav id="Happy_Navbar_S" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div id="Happy_Header" class="container-fluid">
       <img id="Happy_Logo" src="../Sources/logo_header_blanco.svg" alt="Happy_Logo_White">
       <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,30 +37,33 @@
   <!-- Single Product -->
   <section id="Happy_Single_Product">
      <div id="SP_Banner" class="container-fluid d-flex">
-      <img src="../Sources/Products/bodylotion.png">
-      <div id="SP_Info" class="container-fluid d-flex">
-        <h1 id="SP_Prod">PRODUCTO DUMMY</h1>
-        <hr>
-        <h1 id="SP_Cost">COSTO DUMMY</h1>
-        <hr>
-        <h1 id="SP_Detail">Detalles</h1>
-        <h1 id="SP_Detail_2">Detalles Dummy</h1>
-        <button>Comprar</button>
-      </div>
+        <div id="SP_Info_Mobile">
+          <h1 id="SP_Info_Mobile">PRODUCTO DUMMY</h1>
+        </div>
+        <img src="../Sources/Products/bodylotion.png" class="zoom" data-magnify-src="../Sources/Products/bodylotion.png">
+        <div id="SP_Info" class="container-fluid d-flex">
+          <h1 id="SP_Prod">PRODUCTO DUMMY</h1>
+          <hr>
+          <h1 id="SP_Cost">COSTO DUMMY</h1>
+          <hr>
+          <h1 id="SP_Detail">Detalles</h1>
+          <h1 id="SP_Detail_2">Detalles Dummy</h1>
+          <button>Comprar</button>
+        </div>
      </div>
      <div id="Ingredientes" class="container-fluid d-flex">
-       <p id="Ing_Title">
-        Ingredientes
-       </p>
-       <p id="Ing_Desc">
-        Esta es una descripción Dummy
-      </p>
-      <hr>
+        <p id="Ing_Title">
+          Ingredientes
+        </p>
+        <p id="Ing_Desc">
+          Esta es una descripción Dummy
+        </p>
+        <hr>
     </div>
   </section>
   <!-- Products -->
   <section id="Happy_Products">
-    <div id="Container_Products" class="container-fluid d-flex">
+    <div id="Container_Products_O" class="container-fluid d-flex">
       <div id="Products_Title" class="d-flex">
         <h1>
           OTROS PRODUCTOS
@@ -124,7 +126,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!-- JS -->
-  <script src="../Json/app.js"></script>
+  <script src="../Json/app.js"></script>  
 </body>
-
 </html>
