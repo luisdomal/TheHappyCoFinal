@@ -38,3 +38,4 @@ def single_product(id):
 @app.route("/products")
 def products():
   return jsonify(database)
+
