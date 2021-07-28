@@ -39,6 +39,6 @@ def single_product(id):
 def products():
   return jsonify(database)
 
-if __name__ == "__main__":
+if __name__ == "__master__":
   app.run()
 
