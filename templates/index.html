@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TheHappyCo</title>
-  <link rel="stylesheet" href="./Styles/main.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Styles/main.css') }}">
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -16,7 +16,7 @@
   <!-- Navigation Bar -->
   <nav id="Happy_Navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div id="Happy_Header" class="container-fluid">
-      <img id="Happy_Logo" src="./Sources/logo_header_blanco.svg" alt="Happy_Logo_White">
+      <img id="Happy_Logo" src="{{ url_for('static', filename='Sources/logo_header_blanco.svg') }}" alt="Happy_Logo_White">
       <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,7 +38,7 @@
   <!-- Header Banner -->
   <section id="Happy_Header_Banner">
     <div id=Happy_Banner class="container-fluid d-flex">
-      <img src="./Sources/banner.png" alt="Happy_Banner_Image">
+      <img src="{{ url_for('static', filename='Sources/banner.png') }}" alt="Happy_Banner_Image">
       <div id="Happy_Banner_Text" class="container-fluid d-flex">
         <h1>
           PREMIUM CBD
@@ -67,47 +67,47 @@
         </p>
       </div>
       <div id="Benefits_2" class="d-flex">
-        <img src="./Sources/marihuana_plant.png">
+        <img src="{{ url_for('static', filename='Sources/marihuana_plant.png') }}">
       </div>
       <div id="CBD_Benefits" class="container-fluid d-flex">
         <div id="Benefits_1">
           <div id="Col_1">
-            <img src="./Sources/Icons_Que es CBD/icn_inflamac.svg">
+            <img src="{{ url_for('static', filename='Sources/Icons_Que es CBD/icn_inflamac.svg') }}">
             <p>
               Anti-inflamatorio natural
             </p>
           </div>
           <div id="Col_1">
-            <img src="./Sources/Icons_Que es CBD/icn_ansiedad.svg">
+            <img src="{{ url_for('static', filename='Sources/Icons_Que es CBD/icn_ansiedad.svg') }}">
             <p>
               Reduce la ansiedad y síntomas de estrés post-traumático
             </p>
           </div>
           <div id="Col_1">
-            <img src="./Sources/Icons_Que es CBD/icn_temblor.svg">
+            <img src="{{ url_for('static', filename='Sources/Icons_Que es CBD/icn_temblor.svg') }}">
             <p>
               Reduce los temblores de Parkinson
             </p>
           </div>
         </div>
         <div id="Benefits_2_1">
-          <img src="./Sources/marihuana_plant.png">
+          <img src="{{ url_for('static', filename='Sources/marihuana_plant.png') }}">
         </div>
         <div id="Benefits_3">
           <div id="Col_1">
-            <img src="./Sources/Icons_Que es CBD/icn_espasmos.svg">
+            <img src="{{ url_for('static', filename='Sources/Icons_Que es CBD/icn_espasmos.svg') }}">
             <p>
               Mejorar los espasmos de la epilepsia
             </p>
           </div>
           <div id="Col_1">
-            <img src="./Sources/Icons_Que es CBD/icn_intestino.svg">
+            <img src="{{ url_for('static', filename='Sources/Icons_Que es CBD/icn_intestino.svg') }}">
             <p>
               Mejora la función intestinal en pacientes con Crohn
             </p>
           </div>
           <div id="Col_1">
-            <img src="./Sources/Icons_Que es CBD/icn_articul.svg">
+            <img src="{{ url_for('static', filename='Sources/Icons_Que es CBD/icn_articul.svg') }}">
             <p>
               Reduce el dolor articular y progresión de la artritis
             </p>
@@ -134,116 +134,19 @@
           <li id="btn" onclick="filterSelection('vapes')">VAPES</li>
         </ul>
       </div>
+      <!-- Contenedor de Productos (desde Flask) -->
       <div id="Products_List" class="container-fluid d-flex">
-        <div id="container" class="FilterDiv body_lotion">
-          <img src="./Sources/Products/bodylotion.png">
-          <div id="middle">
-            <h1>Body Lotion</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-            <a href="./Public/single_product.html"></a>
+        {% for product in products %}
+          <div id="container" class="FilterDiv {{ product['category'] }}">
+            <img src="{{ url_for('static', filename='Sources/Products/' + product['picture']) }}"/>
+            <div id="middle">
+              <h1>{{ product['name'] }}</h1>
+              <a href="{{ url_for('single_product', id = product['id']) }}">
+                <button>Comprar</button>
+              </a>
+            </div>
           </div>
-        </div>
-        <div id="container" class="FilterDiv cremas">
-          <img src="./Sources/Products/crema_dolor.png">
-          <div id="middle">
-            <h1>Crema para Dolor</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv cremas">
-          <img src="./Sources/Products/crema_manos.png">
-          <div id="middle">
-            <h1>Crema para Manos</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv cremas">
-          <img src="./Sources/Products/crema_pies.png">
-          <div id="middle">
-            <h1>Crema para Pies</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv cremas">
-          <img src="./Sources/Products/crema_refrescante.png">
-          <div id="middle">
-            <h1>Bálsamo Refresante</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv gomitas">
-          <img src="./Sources/Products/gomitas_mango.png">
-          <div id="middle">
-            <h1>Mango Gomitas</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv gomitas">
-          <img src="./Sources/Products/gomitas_manzana.png">
-          <div id="middle">
-            <h1>Manzana Verde Gomitas</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv gomitas">
-          <img src="./Sources/Products/gomitas_pina.png">
-          <div id="middle">
-            <h1>Piña Gomitas</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv tincturas">
-          <img src="./Sources/Products/tinctura_dia.png">
-          <div id="middle">
-            <h1>Tinctura de Día</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv tincturas">
-          <img src="./Sources/Products/tinctura_noche.png">
-          <div id="middle">
-            <h1>Tinctura de Noche</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv vapes">
-          <img src="./Sources/Products/vape.png">
-          <div id="middle">
-            <h1>Cigarro Electrónico</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
-        <div id="container" class="FilterDiv vapes">
-          <img src="./Sources/Products/vape_cigarros.png">
-          <div id="middle">
-            <h1>Cigarros</h1>
-            <a href="./Public/single_product.html">
-              <button>Comprar</button>
-            </a>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -283,7 +186,7 @@
   <section id="Happy_Footer container-fluid d-flex">
     <footer id="Happy_Footer">
       <div id="Grey_Footer" class="d-flex">
-        <img src="./Sources/sello_footer.svg">
+        <img src="{{ url_for('static', filename='Sources/sello_footer.svg') }}">
         <p>
           Distributed by: The Happy Company.
           <br>
@@ -303,12 +206,11 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!-- JS -->
-  <script src="./Json/app.js"></script>
+  <script src="{{ url_for('static', filename='Json/app.js') }}"></script>
   <script>
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
 </script>
 </body>
-
 </html>

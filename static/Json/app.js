@@ -2,22 +2,20 @@
 
 var Happy_Navbar_Scroll = document.getElementById("Happy_Navbar");
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 10) {
-            Happy_Navbar_Scroll.classList.add("scroll");
-        }
-   
-        else{
-            Happy_Navbar_Scroll.classList.remove("scroll");	
-        }
-    })
-  })
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 10) {
+      Happy_Navbar_Scroll.classList.add("scroll");
+    } else {
+      Happy_Navbar_Scroll.classList.remove("scroll");
+    }
+  });
+});
 
 // -------- Filtros para los productos ---------
+filterSelection("all");
 
-filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("FilterDiv");
@@ -58,10 +56,9 @@ function w3RemoveClass(element, name) {
 var btnContainer = document.getElementById("Products_Filter");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
+  btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
 }
-

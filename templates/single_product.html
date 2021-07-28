@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TheHappyCo_Single_Product</title>
-  <link rel="stylesheet" href="../Styles/main.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Styles/main.css' ) }}">
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -15,20 +15,20 @@
   <!-- Navigation Bar -->
   <nav id="Happy_Navbar_S" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div id="Happy_Header" class="container-fluid">
-      <img id="Happy_Logo" src="../Sources/logo_header_blanco.svg" alt="Happy_Logo_White">
+      <img id="Happy_Logo" src="{{ url_for('static', filename='Sources/logo_header_blanco.svg' )}}" alt="Happy_Logo_White">
       <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">INICIO</a>
+            <a class="nav-link" href="{{ url_for('index') }}">INICIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="..//index.html#Happy_Products">PRODUCTOS</a>
+            <a class="nav-link" href="{{ url_for('index') }}#Happy_Products">PRODUCTOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="..//index.html#ContactUs">CONTACTO</a>
+            <a class="nav-link" href="{{ url_for('index') }}#ContactUs">CONTACTO</a>
           </li>
         </ul>
       </div>
@@ -38,16 +38,16 @@
   <section id="Happy_Single_Product">
      <div id="SP_Banner" class="container-fluid d-flex">
         <div id="SP_Info_Mobile">
-          <h1 id="SP_Info_Mobile">PRODUCTO DUMMY</h1>
+          <h1 id="SP_Info_Mobile">{{ product["name"] }}</h1>
         </div>
-        <img src="../Sources/Products/bodylotion.png" class="zoom" data-magnify-src="../Sources/Products/bodylotion.png">
+        <img src="{{ url_for('static', filename='Sources/Products/' + product['picture']) }}">
         <div id="SP_Info" class="container-fluid d-flex">
-          <h1 id="SP_Prod">PRODUCTO DUMMY</h1>
+          <h1 id="SP_Prod">{{ product["name"] }}</h1>
           <hr>
-          <h1 id="SP_Cost">COSTO DUMMY</h1>
+          <h1 id="SP_Cost">{{ product["price"] }} {{ product["currency"]}}</h1>
           <hr>
           <h1 id="SP_Detail">Detalles</h1>
-          <h1 id="SP_Detail_2">Detalles Dummy</h1>
+          <h1 id="SP_Detail_2">{{ product["detail"] }}</h1>
           <button>Comprar</button>
         </div>
      </div>
@@ -56,11 +56,12 @@
           Ingredientes
         </p>
         <p id="Ing_Desc">
-          Esta es una descripción Dummy
+          {{ product["ingredients"] }}
         </p>
         <hr>
     </div>
   </section>
+
   <!-- Products -->
   <section id="Happy_Products">
     <div id="Container_Products_O" class="container-fluid d-flex">
@@ -72,28 +73,28 @@
       </div>
       <div id="Products_List" class="container-fluid d-flex">
         <div id="container" class="FilterDiv cremas">
-          <img src="../Sources/Products/crema_manos.png">
+          <img src="{{ url_for('static', filename='Sources/Products/crema_manos.png')  }}">
           <div id="middle">
             <h1>Crema para Manos</h1>
             <button>Comprar</button>
           </div>
         </div>
         <div id="container" class="FilterDiv gomitas">
-          <img src="../Sources/Products/gomitas_pina.png">
+          <img src="{{ url_for('static', filename='Sources/Products/gomitas_pina.png') }}">
           <div id="middle">
             <h1>Piña Gomitas</h1>
             <button>Comprar</button>
           </div>
         </div>
         <div id="container" class="FilterDiv tincturas">
-          <img src="../Sources/Products/tinctura_noche.png">
+          <img src="{{ url_for('static', filename='Sources/Products/tinctura_noche.png') }}">
           <div id="middle">
             <h1>Tinctura de Noche</h1>
             <button>Comprar</button>
           </div>
         </div>
         <div id="container" class="FilterDiv vapes">
-          <img src="../Sources/Products/vape.png">
+          <img src="{{ url_for('static', filename='Sources/Products/vape.png') }}">
           <div id="middle">
             <h1>Cigarro Electrónico</h1>
             <button>Comprar</button>
@@ -101,12 +102,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section-->
   <!-- Footer -->
   <section id="Happy_Footer container-fluid d-flex">
     <footer id="Happy_Footer">
       <div id="Grey_Footer" class="d-flex">
-        <img src="../Sources/sello_footer.svg">
+        <img src="{{ url_for('static', filename='Sources/sello_footer.svg') }}">
         <p>
           Distributed by: The Happy Company.
           <br>
@@ -126,6 +127,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!-- JS -->
-  <script src="../Json/app.js"></script>  
+  <script src="{{ url_for('static', filename='Json/app.js') }}"></script>  
 </body>
 </html>
