@@ -76,28 +76,36 @@
           <img src="{{ url_for('static', filename='Sources/Products/crema_manos.png')  }}">
           <div id="middle">
             <h1>Crema para Manos</h1>
-            <button>Comprar</button>
+              <a href="{{ url_for('single_product', id = 5) }}">
+                <button>Comprar</button>
+              </a>
           </div>
         </div>
         <div id="container" class="FilterDiv gomitas">
           <img src="{{ url_for('static', filename='Sources/Products/gomitas_pina.png') }}">
           <div id="middle">
             <h1>Piña Gomitas</h1>
-            <button>Comprar</button>
+              <a href="{{ url_for('single_product', id = 10) }}">
+                <button>Comprar</button>
+              </a>
           </div>
         </div>
         <div id="container" class="FilterDiv tincturas">
           <img src="{{ url_for('static', filename='Sources/Products/tinctura_noche.png') }}">
           <div id="middle">
             <h1>Tinctura de Noche</h1>
-            <button>Comprar</button>
+              <a href="{{ url_for('single_product', id = 2) }}">
+                <button>Comprar</button>
+              </a>
           </div>
         </div>
         <div id="container" class="FilterDiv vapes">
           <img src="{{ url_for('static', filename='Sources/Products/vape.png') }}">
           <div id="middle">
             <h1>Cigarro Electrónico</h1>
-            <button>Comprar</button>
+              <a href="{{ url_for('single_product', id = 11) }}">
+                <button>Comprar</button>
+              </a>
           </div>
         </div>
       </div>

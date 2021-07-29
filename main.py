@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify, redirect
 import csv
 import io
+import random
 
 database = []
 
@@ -34,6 +35,12 @@ def single_product(id):
       return render_template("single_product.html", product=product)
 
   return redirect("/")
+
+@app.route("/random/<int:id>")
+def random_id(id):
+  random_prod = random.choice(database)
+  if random_prod["id"]== id:
+    return render_template("single_product.html",random_prod=random_prod)
 
 @app.route("/products")
 def products():
