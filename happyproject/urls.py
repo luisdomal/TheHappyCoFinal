@@ -7,5 +7,4 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('happy/', include("happy.urls")),
-    path('happy/', include('django.contrib.auth.urls')),
 ]

@@ -134,3 +134,14 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Google Cloud Settings.
+from google.oauth2 import service_account
+
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'happyco'
+#STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_PROJECT_ID = 'jovial-light-323900'
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    "jovial-light-323900-29d597db8c7e.json"
+)

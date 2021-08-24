@@ -39,11 +39,11 @@
   <section id="Happy_Single_Product">
      <div id="SP_Banner" class="container-fluid d-flex">
         <div id="SP_Info_Mobile">
-          <h1 id="SP_Info_Mobile">{{ product.name }}</h1>
+          <h1 id="SP_Info_Mobile">{{ product.product }}</h1>
         </div>
-        <img src="{{baseUrl}}Sources/Products/{{product.picture}}">
+        <img src="{{ product.picture.url }} ">
         <div id="SP_Info" class="container-fluid d-flex">
-          <h1 id="SP_Prod">{{ product.name }}</h1>
+          <h1 id="SP_Prod">{{ product.product }}</h1>
           <hr>
           <h1 id="SP_Cost">{{ product.price }} {{ product.currency }}</h1>
           <hr>
@@ -74,10 +74,10 @@
       <div id="Products_List" class="container-fluid d-flex">
         {% for product in random_products %}
           <div id="container" class="FilterDiv {{ product.category }}">
-            <img src="{{baseUrl}}Sources/Products/{{product.picture}}"/>
+            <img src="{{ product.picture.url }}"/>
             <div id="middle">
-              <h1>{{ product.name }}</h1>
-              <a href="{% url 'happy:single_product' id=product.id %}">
+              <h1>{{ product.product }}</h1>
+              <a href="{% url 'happy:single_product' id=product.pk %}">
                 <button>Detalles</button>
               </a>
             </div>

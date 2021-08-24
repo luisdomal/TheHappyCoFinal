@@ -141,10 +141,10 @@
       <div id="Products_List" class="container-fluid d-flex">
         {% for product in products %}
           <div id="container" class="FilterDiv {{ product.category }}">
-            <img src="{{baseUrl}}Sources/Products/{{product.picture}}"/>
+            <img src="{{ product.picture.url }}"/>
             <div id="middle">
-              <h1>{{ product.name }}</h1>
-              <a href="{% url 'happy:single_product' id=product.id %}">
+              <h1>{{ product.product }}</h1>
+              <a href="{% url 'happy:single_product' id=product.pk %}">
                 <button>Detalles</button>
               </a>
             </div>

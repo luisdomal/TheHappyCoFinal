@@ -151,3 +151,7 @@ dmypy.json
 cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
+
+#Google Cloud Service Acc
+
+jovial-light-323900-29d597db8c7e.json
