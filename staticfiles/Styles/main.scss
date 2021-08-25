@@ -1,0 +1,861 @@
+@use 'sources';
+@import './single.product.scss';
+@import './mixins.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding: 70px;
+    scroll-behavior: smooth;
+}
+
+// Navbar
+
+#Happy_Navbar {
+    top: 0;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    padding-top: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 0px;
+    transition: .5s ease;
+
+    #Happy_Logo {
+        height: 60px;
+        width: 350px;
+    }
+
+    #navbarNav {
+        justify-content: flex-end;
+        font-family: sources.$WorkSansSemibold;
+        font-size: sources.$Size_16pt;
+        color: white;
+        cursor: pointer;
+
+        .nav-item :hover {
+            border-bottom: 1px solid white;
+            width: min-content;
+        }
+    }
+
+    a {
+        height: 40px;
+        color: white;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 2px 0px;
+    }
+}
+
+#Happy_Navbar.scroll {
+    background-color: sources.$BlackColor;
+    position: fixed;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: .5s ease;
+    border-bottom: solid white .5px;
+}
+
+// Header Banner
+
+#Happy_Banner {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 50px;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #Happy_Banner_Text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        text-align: center;
+
+        h1 {
+            font-family: sources.$GaramondMediumItalic;
+            font-size: sources.$Size_30pt;
+            color: sources.$BlackColor;
+            margin: 0;
+        }
+
+        p {
+            font-family: sources.$WorkSansRegular;
+            font-size: sources.$Size_16pt;
+            color: sources.$GreyColor;
+            margin: 0;
+        }
+
+        hr {
+            @include AquaLine
+        }
+    }
+}
+
+// What is CBD? Banner
+
+#CBD_Banner {
+    padding: 0;
+    width: auto;
+    background-color: sources.$BlackColor;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    #CBD_Banner_Text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        text-align: center;
+        padding-bottom: 70px;
+
+        h1 {
+            font-family: sources.$GaramondMediumItalic;
+            font-size: sources.$Size_30pt;
+            margin: 0;
+            color: white;
+        }
+
+        p {
+            font-family: sources.$WorkSansRegular;
+            font-size: sources.$Size_16pt;
+            color: sources.$GreyColor;
+            margin: 0;
+            color: white;
+        }
+
+        hr {
+            @include AquaLine
+        }
+    }
+
+    #CBD_Benefits {
+        width: 100%;
+        padding-right: 100px;
+        padding-left: 100px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        #Col_1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #Benefits_1 {
+            flex-basis: 20%;
+
+            img {
+                max-height: 100px;
+                max-width: 100%px;
+                margin: 20px;
+            }
+
+            p {
+                color: white;
+                font-family: sources.$WorkSansRegular;
+                font-size: sources.$Size_16pt;
+            }
+        }
+
+        #Benefits_2_1 {
+            flex-basis: 60%;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+        }
+
+        #Benefits_3 {
+            flex-basis: 20%;
+
+            img {
+                max-height: 100px;
+                max-width: 100px;
+                margin: 20px;
+            }
+
+            p {
+                color: white;
+                font-family: sources.$WorkSansRegular;
+                font-size: sources.$Size_16pt;
+            }
+        }
+    }
+}
+
+// Products
+
+#Container_Products {
+    padding: 0;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #Products_Title {
+        flex-direction: column;
+        align-items: center;
+        width: 55%;
+        text-align: center;
+        justify-content: center;
+
+        h1 {
+            font-family: sources.$GaramondMediumItalic;
+            font-size: sources.$Size_30pt;
+            color: sources.$BlackColor;
+            margin: 0;
+        }
+
+        hr {
+            @include AquaLine
+        }
+    }
+
+    #Products_Filter {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 90%;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: inline-block;
+                color: sources.$BlackColor;
+                font-family: sources.$WorkSansRegular;
+                font-size: sources.$Size_16pt;
+                cursor: pointer;
+            }
+
+            li:hover {
+                background-color: sources.$AquaColor;
+                color: white;
+            }
+
+            #btn.active {
+                background-color: sources.$AquaColor;
+                color: white;
+            }
+        }
+    }
+
+    #Products_List {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        .FilterDiv {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        #container {
+            position: relative;
+
+            img {
+                margin: 10px;
+                max-height: 325px;
+                max-width: 360px;
+            }
+
+            #middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+                width: 80%;
+
+                h1 {
+                    font-family: sources.$WorkSansBold;
+                    font-size: sources.$Size_16pt;
+                    color: white;
+                    text-transform: uppercase;
+                    padding-bottom: 30px;
+                }
+
+                button {
+                    background-color: sources.$AquaColor;
+                    height: 50px;
+                    width: 50%;
+                    color: white;
+                    font-family: sources.$WorkSansRegular;
+                    font-size: sources.$Size_16pt;
+                    border: none;
+                    text-transform: uppercase;
+                }
+                button:hover {
+                    border: solid 1px;
+                    background-color: sources.$BlackColor;
+                    transition: .5s ease;
+                }
+            }
+        }
+
+        #container:hover img {
+            filter: brightness(0.3);
+        }
+
+        #container:hover #middle {
+            opacity: 1;
+        }
+    }
+}
+
+// Contact Us
+
+#Container_Contact {
+    padding: 0;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #Contact_Title {
+        flex-direction: column;
+        align-items: center;
+        width: 55%;
+        text-align: center;
+        justify-content: center;
+
+        h1 {
+            font-family: sources.$GaramondMediumItalic;
+            font-size: sources.$Size_30pt;
+            color: sources.$BlackColor;
+            margin: 0;
+        }
+
+        hr {
+            @include AquaLine
+        }
+    }
+
+    #Form_Contact {
+        width: 90%;
+        padding: 0;
+        padding-top: 0px;
+        justify-content: center;
+
+        #Form1 {
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 20%;
+
+            .form-field {
+                width: 100%;
+
+                ::placeholder {
+                    color: sources.$BoxTextColor;
+                    font-size: sources.$Size_12pt;
+                    padding-left: 20px;
+                }
+
+                .input-text {
+                    width: 100%;
+                    height: 50px;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    background-color: sources.$BoxBackgroundColor;
+                    font-family: sources.$WorkSansRegular;
+                    font-size: sources.$Size_12pt;
+                    padding-left: 20px;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-bottom: solid .5px sources.$BoxTextColor;
+
+                }
+            }
+        }
+
+        #Form2 {
+            width: 70%;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            .form-field {
+                width: 100%;
+                height: 100%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                ::placeholder {
+                    font-size: sources.$Size_12pt;
+                    color: sources.$BoxTextColor;
+                    line-height: 5;
+                    padding-left: 20px;
+                }
+
+                .input-text {
+                    line-height: 3;
+                    width: 100%;
+                    height: 100%;
+                    background-color: sources.$BoxBackgroundColor;
+                    font-family: sources.$WorkSansRegular;
+                    font-size: sources.$Size_12pt;
+                    padding-left: 20px;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-bottom: solid .5px sources.$BoxTextColor;
+                }
+            }
+        }
+    }
+
+    #Enviar {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 90%;
+        padding: 0;
+        justify-content: flex-end;
+        padding-right: 100px;
+
+        button {
+            background-color: sources.$AquaColor;
+            flex-basis: 8%;
+            height: 50px;
+            width: 100%;
+            color: white;
+            font-family: sources.$WorkSansRegular;
+            font-size: sources.$Size_16pt;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: sources.$BlackColor;
+            transition: .5s ease;
+        }
+    }
+
+}
+
+// Footer
+
+#Happy_Footer {
+    max-height: 250px;
+    width: 100%;
+
+    #Grey_Footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: sources.$BoxBackgroundColor;
+        padding-bottom: 15px;
+
+        img {
+            height: 70px;
+            width: 70px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            text-align: center;
+            font-family: sources.$WorkSansRegular;
+            color: sources.$GreyColor;
+            font-size: sources.$Size_14pt;
+        }
+    }
+
+    #Black_Footer {
+        background-color: sources.$BlackColor;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+            font-family: sources.$WorkSansItalic;
+            font-size: sources.$Size_12pt;
+            text-align: center;
+        }
+    }
+}
+
+// ------ Media Query  --------
+
+@media(max-width: 1200px) {
+    #CBD_Banner {
+        #CBD_Benefits {
+            padding-right: 50px;
+            padding-left: 50px;
+
+            #Col_1 {
+                max-height: 180px;
+            }
+
+            #Benefits_1 {
+                p {
+                    font-size: sources.$Size_10pt;
+                }
+            }
+
+            #Benefits_3 {
+                p {
+                    font-size: sources.$Size_10pt;
+                }
+            }
+        }
+    }
+
+    #Container_Contact {
+        padding: 0;
+
+        #Form_Contact {
+            flex-direction: column;
+            padding: 0;
+
+            #Form1 {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+
+                .form-field {
+                    ::placeholder {
+                        font-size: sources.$Size_10pt;
+                        padding-left: 0;
+                    }
+
+                    .input-text {
+                        height: 40px;
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        font-size: sources.$Size_10pt;
+                    }
+                }
+            }
+
+            #Form2 {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+
+                .form-field {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+
+                    ::placeholder {
+                        font-size: sources.$Size_10pt;
+                        padding-left: 0;
+                    }
+
+                    .input-text {
+                        font-size: sources.$Size_10pt;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        #Enviar {
+            width: 90%;
+            padding: 0;
+            justify-content: flex-end;
+            padding-right: 50px;
+        }
+
+    }
+
+    #Happy_Footer {
+        max-height: 200px;
+
+        #Grey_Footer {
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 0px;
+
+            img {
+                height: 70px;
+                width: 70px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        #Black_Footer {
+            padding-left: 25px;
+            padding-right: 25px;
+
+            h2 {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 831px) {
+    #Benefits_2 {
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 831px) {
+    html {
+        scroll-padding: 60px;
+    }
+
+    #Happy_Navbar {
+        background-color: sources.$BlackColor;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 0px;
+        padding-right: 0px;
+        transition: .5s ease;
+        border-bottom: solid white .5px;
+
+        #Happy_Logo {
+            height: 50px;
+            width: 150px;
+        }
+
+        #navbarNav {
+            font-size: sources.$Size_10pt;
+        }
+
+        a {
+            height: 25px;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        .nav-item {
+            padding-bottom: 10px;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,250,250)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+
+    #Happy_Banner {
+        #Happy_Banner_Text {
+            width: 90%;
+            text-align: justify;
+
+            h1 {
+                font-size: sources.$Size_16pt;
+            }
+
+            p {
+                font-size: sources.$Size_10pt;
+            }
+        }
+    }
+
+    #CBD_Banner {
+        #CBD_Banner_Text {
+            width: 90%;
+            text-align: justify;
+
+            h1 {
+                font-size: sources.$Size_16pt;
+            }
+
+            p {
+                font-size: sources.$Size_10pt;
+            }
+        }
+
+        #Benefits_2 {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        #CBD_Benefits {
+            padding-right: 50px;
+            padding-left: 50px;
+
+            #Benefits_1 {
+                flex-basis: 50%;
+                order: 2;
+            }
+
+            #Benefits_2_1 {
+                display: none;
+
+            }
+
+            #Benefits_3 {
+                order: 3;
+                flex-basis: 50%;
+            }
+        }
+    }
+
+    #Container_Products {
+        #Products_Title {
+            width: 90%;
+
+            h1 {
+                font-size: sources.$Size_16pt;
+            }
+        }
+
+        #Products_Filter {
+            width: 90%;
+            padding: 0;
+
+            ul {
+                li {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    font-size: sources.$Size_10pt;
+                }
+            }
+        }
+
+        #Products_List {
+            img {
+                max-height: 125px;
+                max-width: 160px;
+            }
+        }
+
+        #Products_List {
+            #container {
+                img {
+                    max-height: 125px;
+                    max-width: 160px;
+                }
+
+                #middle {
+                    h1 {
+                        font-size: sources.$Size_8pt;
+                        padding-bottom: 0;
+                    }
+
+                    button {
+                        height: 20px;
+                        font-size: sources.$Size_8pt;
+                    }
+                }
+            }
+
+            #container:hover img {
+                filter: brightness(0.3);
+            }
+
+            #container:hover #middle {
+                opacity: 1;
+            }
+        }
+    }
+
+    #Container_Contact {
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        #Contact_Title {
+            width: 90%;
+
+            h1 {
+                font-size: sources.$Size_16pt;
+
+            }
+        }
+
+        #Form_Contact {
+            padding: 0;
+        }
+
+        #Enviar {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 90%;
+            padding: 0;
+            justify-content: center;
+
+            button {
+                flex-basis: 50%;
+                height: 50px;
+                font-size: sources.$Size_12pt;
+            }
+        }
+
+    }
+
+    #Happy_Footer {
+        max-height: 200px;
+
+        #Grey_Footer {
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 0px;
+
+            img {
+                height: 70px;
+                width: 70px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: sources.$Size_10pt;
+            }
+        }
+
+        #Black_Footer {
+            padding-left: 25px;
+            padding-right: 25px;
+
+            h2 {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: sources.$Size_10pt;
+
+            }
+        }
+    }
+}

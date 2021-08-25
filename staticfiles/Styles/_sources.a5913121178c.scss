@@ -1,0 +1,42 @@
+@font-face {
+    font-family: WorkSansSemibold;
+    src: url(../Fonts/Works_Sans/WorkSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: WorkSansRegular;
+    src: url(../Fonts/Works_Sans/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: WorkSansItalic;
+    src: url(../Fonts/Works_Sans/WorkSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: WorkSansBold;
+    src: url(../Fonts/Works_Sans/WorkSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: GaramondMediumItalic;
+    src: url(../Fonts/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf);
+}
+
+$BlackColor: #101820;
+$AquaColor: #3AAA81;
+$GreyColor: #666666;
+$BoxBackgroundColor: #EEEFEF;
+$BoxTextColor: #C2C2C2;
+$DetailColoLines: #BDBEBD;
+$WorkSansSemibold: WorkSansSemibold;
+$WorkSansRegular: WorkSansRegular;
+$WorkSansItalic: WorkSansItalic;
+$WorkSansBold: WorkSansBold;
+$GaramondMediumItalic: GaramondMediumItalic;
+$Size_8pt: 10px;
+$Size_10pt: 13px;
+$Size_12pt: 16px;
+$Size_14pt: 18px;
+$Size_16pt: 22px;
+$Size_30pt: 40px;
