@@ -1,6 +1,7 @@
 """Production Settings"""
 
 import os
+import json
 import dj_database_url
 from .base import *
 
@@ -27,7 +28,11 @@ DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_BUCKET_NAME = 'happyco'
 #STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_PROJECT_ID = 'jovial-light-323900'
-GS_CREDENTIALS = os.getenv("GCS_SECRET_KEY")
+gcp_credentials_string = os.getenv("GCS_SECRET_KEY")
+gcp_json_credentials_dict = json.loads(gcp_credentials_string)
+GS_CREDENTIALS = service_account.Credentials.from_service_account_info(gcp_json_credentials_dict)
+
+
 
 #Apartado de seguridad
 
