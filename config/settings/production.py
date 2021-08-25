@@ -29,8 +29,6 @@ GS_BUCKET_NAME = 'happyco'
 GS_PROJECT_ID = 'jovial-light-323900'
 GS_CREDENTIALS = os.getenv("GCS_SECRET_KEY")
 
-DEBUG = False
-
 #Apartado de seguridad
 
 SECURE_HSTS_SECONDS = 60
