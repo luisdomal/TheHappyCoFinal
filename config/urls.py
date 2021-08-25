@@ -1,4 +1,4 @@
-"""happyproject URL Configuration"""
+"""config URL Configuration"""
 
 
 from django.contrib import admin
