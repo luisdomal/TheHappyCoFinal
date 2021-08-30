@@ -769,26 +769,32 @@ html {
   opacity: 100%;
   background-color: #3AAA81;
 }
-#Container_Contact #Form_Contact {
+#Container_Contact #Contact_Form {
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+#Container_Contact #Contact_Form #Form_Contact {
   width: 90%;
   padding: 0;
   padding-top: 0px;
   justify-content: center;
 }
-#Container_Contact #Form_Contact #Form1 {
+#Container_Contact #Contact_Form #Form_Contact #Form1 {
   margin-left: 20px;
   margin-right: 20px;
   width: 20%;
+  flex-direction: row;
 }
-#Container_Contact #Form_Contact #Form1 .form-field {
+#Container_Contact #Contact_Form #Form_Contact #Form1 .form-field {
   width: 100%;
 }
-#Container_Contact #Form_Contact #Form1 .form-field ::placeholder {
+#Container_Contact #Contact_Form #Form_Contact #Form1 .form-field ::placeholder {
   color: #C2C2C2;
   font-size: 16px;
   padding-left: 20px;
 }
-#Container_Contact #Form_Contact #Form1 .form-field .input-text {
+#Container_Contact #Contact_Form #Form_Contact #Form1 .form-field .input-text {
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
@@ -802,24 +808,24 @@ html {
   border-right: none;
   border-bottom: solid 0.5px #C2C2C2;
 }
-#Container_Contact #Form_Contact #Form2 {
+#Container_Contact #Contact_Form #Form_Contact #Form2 {
   width: 70%;
   margin-left: 20px;
   margin-right: 20px;
 }
-#Container_Contact #Form_Contact #Form2 .form-field {
+#Container_Contact #Contact_Form #Form_Contact #Form2 .form-field {
   width: 100%;
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-#Container_Contact #Form_Contact #Form2 .form-field ::placeholder {
+#Container_Contact #Contact_Form #Form_Contact #Form2 .form-field ::placeholder {
   font-size: 16px;
   color: #C2C2C2;
   line-height: 5;
   padding-left: 20px;
 }
-#Container_Contact #Form_Contact #Form2 .form-field .input-text {
+#Container_Contact #Contact_Form #Form_Contact #Form2 .form-field .input-text {
   line-height: 3;
   width: 100%;
   height: 100%;
@@ -832,7 +838,7 @@ html {
   border-right: none;
   border-bottom: solid 0.5px #C2C2C2;
 }
-#Container_Contact #Enviar {
+#Container_Contact #Contact_Form #Enviar {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 90%;
@@ -840,7 +846,7 @@ html {
   justify-content: flex-end;
   padding-right: 100px;
 }
-#Container_Contact #Enviar button {
+#Container_Contact #Contact_Form #Enviar button {
   background-color: #3AAA81;
   flex-basis: 8%;
   height: 50px;
@@ -851,7 +857,7 @@ html {
   border: none;
   text-transform: uppercase;
 }
-#Container_Contact #Enviar button:hover {
+#Container_Contact #Contact_Form #Enviar button:hover {
   background-color: #101820;
   transition: 0.5s ease;
 }
@@ -911,43 +917,43 @@ html {
   #Container_Contact {
     padding: 0;
   }
-  #Container_Contact #Form_Contact {
+  #Container_Contact #Contact_Form #Form_Contact {
     flex-direction: column;
     padding: 0;
   }
-  #Container_Contact #Form_Contact #Form1 {
+  #Container_Contact #Contact_Form #Form_Contact #Form1 {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
   }
-  #Container_Contact #Form_Contact #Form1 .form-field ::placeholder {
+  #Container_Contact #Contact_Form #Form_Contact #Form1 .form-field ::placeholder {
     font-size: 13px;
     padding-left: 0;
   }
-  #Container_Contact #Form_Contact #Form1 .form-field .input-text {
+  #Container_Contact #Contact_Form #Form_Contact #Form1 .form-field .input-text {
     height: 40px;
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 13px;
   }
-  #Container_Contact #Form_Contact #Form2 {
+  #Container_Contact #Contact_Form #Form_Contact #Form2 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
-  #Container_Contact #Form_Contact #Form2 .form-field {
+  #Container_Contact #Contact_Form #Form_Contact #Form2 .form-field {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  #Container_Contact #Form_Contact #Form2 .form-field ::placeholder {
+  #Container_Contact #Contact_Form #Form_Contact #Form2 .form-field ::placeholder {
     font-size: 13px;
     padding-left: 0;
   }
-  #Container_Contact #Form_Contact #Form2 .form-field .input-text {
+  #Container_Contact #Contact_Form #Form_Contact #Form2 .form-field .input-text {
     font-size: 13px;
     padding-left: 20px;
   }
-  #Container_Contact #Enviar {
+  #Container_Contact #Contact_Form #Enviar {
     width: 90%;
     padding: 0;
     justify-content: flex-end;
@@ -1113,17 +1119,17 @@ html {
   #Container_Contact #Contact_Title h1 {
     font-size: 22px;
   }
-  #Container_Contact #Form_Contact {
+  #Container_Contact #Contact_Form #Form_Contact {
     padding: 0;
   }
-  #Container_Contact #Enviar {
+  #Container_Contact #Contact_Form #Enviar {
     margin-top: 0px;
     margin-bottom: 0px;
     width: 90%;
     padding: 0;
     justify-content: center;
   }
-  #Container_Contact #Enviar button {
+  #Container_Contact #Contact_Form #Enviar button {
     flex-basis: 50%;
     height: 50px;
     font-size: 16px;
