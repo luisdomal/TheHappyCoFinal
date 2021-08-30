@@ -162,27 +162,30 @@
         </h1>
         <hr>
       </div>
-      <div id="Form_Contact" class="container-fluid d-flex">
-        <div class="contact-form column" id="Form1">
-          <div class="form-field col-lg-4">
-            <input type="text" id="Nombre" class="input-text" name=" " placeholder="Nombre">
+      <form method="post">
+        {% csrf_token %}
+        <div id="Form_Contact" class="container-fluid d-flex">
+          <div class="contact-form column" id="Form1">
+            <div class="form-field col-lg-4">
+              <input type="text" id="Nombre" class="input-text" name="name" placeholder="Nombre">
+            </div>
+            <div class="form-field col-lg-4">
+              <input type="email" id="email" class="input-text" name="email" placeholder="Email">
+            </div>
+            <div class="form-field col-lg-4">
+              <input type="text" id="asunto" class="input-text  " name="affair" placeholder="Asunto">
+            </div>
           </div>
-          <div class="form-field col-lg-4">
-            <input type="email" id="email" class="input-text" name=" " placeholder="Email">
-          </div>
-          <div class="form-field col-lg-4">
-            <input type="text" id="asunto" class="input-text  " name=" " placeholder="Asunto">
+          <div class="contact-form column" id="Form2">
+            <div class="form-field col-lg-9">
+              <textarea rows="4" id="Message" class="input-text" name="message" placeholder="Mensaje" type="text"></textarea>
+            </div>
           </div>
         </div>
-        <div class="contact-form column" id="Form2">
-          <div class="form-field col-lg-9">
-            <textarea rows="4" id="Message" class="input-text" name=" " placeholder="Mensaje"></textarea>
-          </div>
+        <div id="Enviar" class="container-fluid d-flex">
+          <button type="submit">Enviar</button>
         </div>
-      </div>
-      <div id="Enviar" class="container-fluid d-flex">
-        <button>Enviar</button>
-      </div>
+      </form>
     </div>
   </section>
   <!-- Footer -->

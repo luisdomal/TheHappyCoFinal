@@ -2,7 +2,7 @@
 import random
 
 from django.shortcuts import redirect, render
-from .models import Product
+from .models import Contact, Product
 
 
 def index(request):
@@ -21,5 +21,15 @@ def single_product(request,id):
         print(products)
         return redirect("happy:index")
 
-
-
+def message(request):
+    """Create a new message"""
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        affair = request.POST.get("affair")
+        message = request.POST.get("message")
+        contact = Contact(name=name, email=email,
+                    affair=affair, message=message)
+        contact.save()
+        return redirect("happy:index")
+    return render(request, 'happy/index.html')

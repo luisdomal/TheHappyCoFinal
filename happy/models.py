@@ -15,3 +15,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product
+
+class Contact(models.Model):
+    """Contact model"""
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    affair = models.CharField(max_length=255)
+    message = models.CharField(max_length=500)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
