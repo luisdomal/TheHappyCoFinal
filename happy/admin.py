@@ -9,7 +9,8 @@ admin.site.site_header = "The Happy Co"
 
 class HappyContactAdmin(admin.ModelAdmin):
     list_display = ('affair', 'name','email', 'created_at')
-    list_filter = ('name' ,'email', 'created_at')
+    search_fields = ('name' ,'email')
+    list_filter = ('created_at',)
 
 class HappyProductAdmin(admin.ModelAdmin):
     list_display = ('product','price', 'currency', 'category')
